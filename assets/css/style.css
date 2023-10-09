@@ -66,6 +66,7 @@ button {
 
 ion-icon {
   pointer-events: none;
+  color: #000;
 }
 
 h1,
@@ -161,6 +162,7 @@ h3 {
   background-color: #fff;
   border-block-end: 1px solid hsl(0, 0%, 93%);
   transition: 0.25s ease;
+  z-index: 999;
 }
 
 .header.active {
@@ -454,6 +456,9 @@ footer {
   font: bold 16px sans-serif;
   padding: 50px 50px 60px 50px;
   margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .footer-distributed .footer-left,
@@ -471,12 +476,8 @@ footer {
 
 .footer-distributed h3 {
   color: #ffffff;
-  font: normal 36px "Cookie", cursive;
+  font: normal 36px;
   margin: 0;
-}
-
-.footer-distributed h3 span {
-  color: #e0ac1c;
 }
 
 /* Footer links */
@@ -504,10 +505,14 @@ footer {
 
 .footer-distributed .footer-center {
   width: 35%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; */
 }
 
 .footer-distributed .footer-center i {
-  background-color: #33383b;
+  /* background-color: #33383b; */
   color: #ffffff;
   font-size: 25px;
   width: 38px;
@@ -519,8 +524,8 @@ footer {
   vertical-align: middle;
 }
 
-.footer-distributed .footer-center i.fa-envelope {
-  font-size: 17px;
+.footer-distributed .footer-center i.uil-envelope {
+  font-size: 25px;
   line-height: 38px;
 }
 
@@ -532,7 +537,7 @@ footer {
 }
 
 .footer-distributed .footer-center p span {
-  display: block;
+  display: inline-block;
   font-weight: normal;
   font-size: 14px;
   line-height: 2;
@@ -593,15 +598,128 @@ footer {
 }
 
 @media (max-width: 880px) {
+  .footer-distributed {
+    display: flex;
+    flex-direction: column;
+  }
   .footer-distributed .footer-left,
   .footer-distributed .footer-center,
   .footer-distributed .footer-right {
-    display: block;
     width: 100%;
     margin-bottom: 40px;
     text-align: center;
   }
+  .footer-distributed .footer-center div i {
+    display: none;
+  }
   .footer-distributed .footer-center i {
     margin-left: 0;
   }
+}
+
+/* conatct section styling */
+
+.contact {
+  background-color: hsl(0, 14%, 98%);
+}
+
+.contact .section-text {
+  margin-block: 5px 35px;
+}
+
+.contact-form {
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  border-radius: 2px;
+  margin-block-end: 30px;
+  box-shadow: 0 6px 24px hsla(0, 0%, 0%, 0.05);
+}
+
+.input-field {
+  background-color: hsl(0, 14%, 98%);
+  color: hsl(240, 6%, 10%);
+  font-size: 1.4rem;
+  padding: 15px;
+  border-radius: 2px;
+  outline: 1px solid transparent;
+  outline-offset: 0;
+  margin-block-end: 15px;
+}
+
+.input-field::-webkit-inner-spin-button {
+  display: none;
+}
+
+.input-field:focus {
+  outline-color: hsl(341, 100%, 49%);
+}
+
+.input-field::placeholder {
+  transition: 0.25s ease;
+}
+
+.input-field:focus::placeholder {
+  opacity: 0;
+}
+
+textarea.input-field {
+  resize: vertical;
+  min-height: 80px;
+  height: 100px;
+  max-height: 200px;
+  overscroll-behavior: contain;
+}
+
+.checkbox {
+  width: max-content;
+  margin-block-start: 5px;
+  accent-color: hsl(341, 100%, 49%);
+}
+
+.label-link {
+  display: inline-block;
+  color: hsl(341, 100%, 49%);
+}
+
+.label-link:is(:hover, :focus) {
+  text-decoration: underline;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-block-end: 15px;
+}
+
+.checkbox-wrapper .label {
+  font-size: var(--fs-6);
+}
+
+/* Back to top button */
+
+.back-top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: hsla(0, 0%, 0%, 0.1);
+  color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 6px 24px #ccc;
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+}
+
+.back-top-btn.active {
+  opacity: 1;
+  visibility: visisble;
+  transform: translateY(-10px);
+}
+
+.back-top-btn:hover,
+.back-top.btn:focus {
+  opacity: 0.9;
 }

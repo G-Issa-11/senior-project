@@ -189,50 +189,130 @@
           <h2 class="h2 section-title">Let's get to work!</h2>
           <a href="#" class="btn btn-secondary">Get Started</a>
         </section>
+
+        <section class="section contact" id="#contact" aria-label="conatct">
+          <div class="container">
+            <h2 class="h2 section-title">Hane any Questions?</h2>
+            <p class="section-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
+              asperiores in officia quod voluptatum adipisci cumque ab hic
+              quisquam nulla.
+            </p>
+            <form action="" class="contact-form">
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="name"
+                  aria-label="name"
+                  placeholder="Your name*"
+                  required
+                  class="input-field"
+                />
+
+                <input
+                  type="email"
+                  name="email_address"
+                  aria-label="email"
+                  placeholder="Email address*"
+                  required
+                  class="input-field"
+                />
+              </div>
+
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="subject"
+                  aria-label="subject"
+                  placeholder="Subject"
+                  class="input-field"
+                />
+
+                <input
+                  type="number"
+                  name="phone"
+                  aria-label="phone"
+                  placeholder="Phone number"
+                  class="input-field"
+                />
+              </div>
+
+              <textarea
+                name="message"
+                aria-label="message"
+                placeholder="Your message...*"
+                required
+                class="input-field"
+              ></textarea>
+
+              <div class="checkbox-wrapper">
+                <input
+                  type="checkbox"
+                  name="terms_and_policy"
+                  id="terms"
+                  required
+                  class="checkbox"
+                />
+
+                <label for="terms" class="label">
+                  Accept
+                  <a href="#" class="label-link">Terms of Services</a> and
+                  <a href="#" class="label-link">Privacy Policy</a>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </section>
       </article>
     </main>
 
     <!-- footer -->
     <footer class="footer-distributed">
       <div class="footer-left">
-        <h3>Sagar<span>Developer</span></h3>
+        <h3>Gissa</h3>
 
         <p class="footer-links">
           <a href="#">Home</a>
           |
-          <a href="#">About</a>
+          <a href="#service">Services</a>
           |
-          <a href="#">Contact</a>
-          |
-          <a href="#">Blog</a>
+          <a href="#contact">contact</a>
         </p>
 
         <p class="footer-company-name">
-          Copyright © 2021 <strong>SagarDeveloper</strong> All rights reserved
+          Copyright &copy; 2023 <strong>Ghada Issa</strong> All rights reserved
         </p>
       </div>
 
       <div class="footer-center">
         <div>
           <i class="uil uil-map-marker"></i>
-          <p><span>Ghaziabad</span> Delhi</p>
+          <p>Bethlehem, Palestine</p>
         </div>
 
         <div>
           <i class="uil uil-phone"></i>
-          <p>+91 74**9**258</p>
+          <p>+970 599**8**3</p>
         </div>
+
         <div>
           <i class="uil uil-envelope"></i>
-          <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
+          <p>
+            <a href="ghada.issa@students.alquds.edu"
+              >ghada.issa@students.alquds.edu</a
+            >
+          </p>
         </div>
       </div>
       <div class="footer-right">
         <p class="footer-company-about">
-          <span>About the company</span>
-          <strong>Sagar Developer</strong> is a Youtube channel where you can
-          find more creative CSS Animations and Effects along with HTML,
-          JavaScript and Projects using C/C++.
+          <span>About the project</span>
+          <strong>Gissa</strong> is Ghada Issa's senior project in computer
+          science. It's an instrument for understanding future.
         </p>
         <div class="footer-icons">
           <a href="#"><i class="uil uil-facebook-f"></i></a>
@@ -242,6 +322,16 @@
         </div>
       </div>
     </footer>
+
+    <!-- Back to top -->
+    <a
+      href="#top"
+      aria-label="back to top"
+      data-back-top-btn
+      class="back-top-btn"
+    >
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
 
     <!-- JS -->
     <script src="./assets/js/app.js"></script>
