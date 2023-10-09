@@ -723,3 +723,164 @@ textarea.input-field {
 .back-top.btn:focus {
   opacity: 0.9;
 }
+
+/* media queries */
+
+@media (min-width: 575px) {
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+  }
+
+  .input-wrapper {
+    display: flex;
+    gap: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .section-text {
+    max-width: 65ch;
+    margin-inline: auto;
+  }
+
+  .hero-text {
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+
+  .about-banner {
+    max-width: 550px;
+  }
+
+  .about .section-text {
+    max-width: unset;
+    margin-inline: 0;
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+
+  .conatct-item {
+    min-width: calc(50% - 12.5px);
+  }
+}
+
+@media (min-width: 992px) {
+  section {
+    padding: 100px;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+
+  .grid-list {
+    grid-template-columns: repeat (3, 1fr);
+  }
+
+  .nav-toggle-btn {
+    display: none;
+  }
+
+  .navbar,
+  .navbar.active {
+    all: unset;
+  }
+
+  .navbar-list {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .navbar-link {
+    position: relative;
+  }
+
+  .navbar-link:hover {
+    color: black;
+  }
+
+  .navbar-link::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: lightpink;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s ease;
+  }
+
+  .navbar-link:is(:hover, :focus)::after {
+    transform: scaleX(1);
+  }
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+  }
+
+  .hero-content {
+    margin-block-end: 0;
+  }
+
+  .hero-subtitle {
+    position: relative;
+    padding-inline-start: 15px;
+  }
+
+  .hero-subtitle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--red-crayola);
+  }
+
+  .hero-text,
+  .hero .btn {
+    margin-inline: 0;
+  }
+
+  .header .btn {
+    margin-block-start: 0;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-card .h3 {
+    --fs-3: 2.3rem;
+  }
+  .about .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-banner {
+    margin-block-end: 0;
+  }
+}
