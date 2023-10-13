@@ -1,4 +1,6 @@
-console.log("hello world");
+// console.log("hello world");
+
+// event.preventDefault();
 
 const addEventonElen = function(element, type, callback) {
   if (element.length > 1) {
@@ -33,12 +35,18 @@ const closeNavbar = () => {
 
 addEventonElen(navLinks, "click", closeNavbar);
 
-const header = document.querySelector("[data-header]");
+// Get the back-to-top button element
+const backToTopButton = document.querySelector("[data-back-top-btn]");
 
+// Add a scroll event listener
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    header.classList.add("active");
+  // Check the user's scroll position
+  if (window.scrollY > 200) {
+    // You can adjust this value
+    // Show the button when the user has scrolled down a certain amount
+    backToTopButton.classList.add("active");
   } else {
-    header.classList.remove("active");
+    // Hide the button when the user is near the top
+    backToTopButton.classList.remove("active");
   }
 });
