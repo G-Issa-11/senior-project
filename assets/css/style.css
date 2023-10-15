@@ -1,4 +1,19 @@
-/*  */
+/* Variables */
+
+:root {
+  --rihno: #2b2e63;
+  --mischka: #ced1da;
+  --fountain-blue: #57adbf;
+  --ship-cove: #798dc5;
+  --black: #000;
+  --white: #fff;
+  --eerie-black: #1b1b1b;
+  --grey-text: hsl(220, 5%, 49%);
+  --white2: #f1f1f1;
+  --font-s1: 1.6rem;
+}
+
+/* Generic */
 *,
 *::before,
 *::after {
@@ -14,9 +29,9 @@ html {
 }
 
 body {
-  background-color: #fff;
-  color: hsl(220, 5%, 49%);
-  font-size: 1.6rem;
+  background-color: var(--white);
+  color: var(--grey-text);
+  font-size: var(--font-s1);
   line-height: 1.8;
   /* height: 300vh; */
 }
@@ -66,13 +81,13 @@ button {
 
 ion-icon {
   pointer-events: none;
-  color: #000;
+  color: var(--black);
 }
 
 h1,
 h2,
 h3 {
-  color: hsl(240, 6%, 10%);
+  color: var(--eerie-black);
   line-height: 1.2;
   font-family: "League Spartan", sans-serif;
 }
@@ -94,7 +109,7 @@ h3 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--white2);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -118,38 +133,43 @@ h3 {
 
 .btn {
   max-width: max-content;
-  color: #fff;
+  color: var(--white);
   font-size: 1.3rem;
   font-weight: 700;
-  padding: 10px 30px;
+  padding: 10px 25px;
   border-radius: 5px;
-  transition: 0.25s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .btn-primary {
-  /* background: #e3e553; */
-  background-image: linear-gradient(135deg, #e3e553, #e2d922);
+  background-image: linear-gradient(160deg, var(--rihno), var(--fountain-blue));
   background-size: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  transition: 0.25s ease-in-out;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
   background-position: bottom right;
-  background-image: none;
-  background-color: mediumseagreen;
-  color: white;
-  transition: 1.2s ease;
+  /* background-image: none; */
+  transform: translateY(1px);
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  transition: 0.25s ease-in-out;
 }
 
 .btn-secondary {
-  color: #fff;
-  background-color: #000;
+  background-color: var(--ship-cove);
+  background-size: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  transition: 0.25s ease-in-out;
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #000;
-  background-color: #fff;
+  background-position: bottom right;
+  transform: translateY(1px);
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  transition: 0.25s ease-in-out;
 }
 
 .header {
@@ -158,7 +178,7 @@ h3 {
   left: 0;
   padding: 0px 15px;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--white);
   border-block-end: 1px solid hsl(0, 0%, 93%);
   transition: 0.25s ease;
   z-index: 999;
@@ -204,7 +224,8 @@ h3 {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  max-width: calc(100% - 30px);
+  /* max-width: calc(100% - 30px); */
+  max-width: 100%;
   width: 100%;
   padding: 10px;
   border: 1px solid hsl(0, 0%, 93%);
@@ -236,7 +257,7 @@ h3 {
 
 .navbar-link:hover,
 .navbar-link:focus {
-  color: magenta;
+  color: var(--rihno);
   cursor: pointer;
 }
 
@@ -246,7 +267,7 @@ h3 {
 
 /* section styling */
 .section {
-  padding: 60px;
+  padding: 50px;
 }
 
 .section-title,
@@ -306,7 +327,7 @@ h3 {
 /* services section */
 
 .service {
-  background-color: hsl(0, 14%, 98%);
+  background-color: hsl(200, 10%, 98%);
 }
 
 .service .section-text {
@@ -363,7 +384,6 @@ h3 {
   margin-block-end: 25px;
   width: 100%;
   max-width: 100%;
-  height: 100vh;
 }
 
 .about .section-text,
@@ -384,15 +404,15 @@ h3 {
 }
 
 .img-holder {
-  background-color: #eee;
   z-index: 1;
   padding: 15px;
+  /* height: min-content; */
 }
 
 .img-cover {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 /* cta styling  */
@@ -412,7 +432,7 @@ h3 {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: red;
+  background-color: var(--fountain-blue);
   opacity: 0.5;
   z-index: -1;
 }
@@ -423,7 +443,7 @@ h3 {
 }
 
 .cta-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   text-align: center;
 }
@@ -454,11 +474,11 @@ footer {
 }
 
 .footer-distributed {
-  background-color: #2d2a30;
+  background-color: var(--eerie-black);
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font: bold 16px sans-serif;
+  font: bold 16px;
   padding: 50px 50px 60px 50px;
   /* margin-top: 80px; */
   display: flex;
@@ -549,7 +569,7 @@ footer {
 }
 
 .footer-distributed .footer-center p a {
-  color: #e0ac1c;
+  color: var(--fountain-blue);
   text-decoration: none;
 }
 
@@ -595,11 +615,11 @@ footer {
 }
 
 .footer-distributed .footer-icons a:hover {
-  background-color: #3f71ea;
+  background-color: var(--fountain-blue);
 }
 
 .footer-links a:hover {
-  color: #3f71ea;
+  color: var(--fountain-blue);
 }
 
 @media (max-width: 880px) {
@@ -625,7 +645,7 @@ footer {
 /* conatct section styling */
 
 .contact {
-  background-color: hsl(0, 14%, 98%);
+  background-color: hsl(200, 10%, 98%);
 }
 
 .contact .section-text {
@@ -641,7 +661,7 @@ footer {
 }
 
 .contact-form .input-field {
-  background-color: hsl(0, 14%, 98%);
+  background-color: hsl(200, 10%, 98%);
   color: hsl(240, 6%, 10%);
   font-size: 1.4rem;
   padding: 15px;
@@ -656,7 +676,7 @@ footer {
 }
 
 .contact-form .input-field:focus {
-  outline-color: hsl(341, 100%, 49%);
+  outline-color: var(--fountain-blue);
 }
 
 .contact-form .input-field::placeholder {
@@ -678,12 +698,12 @@ textarea.input-field {
 .checkbox {
   width: max-content;
   margin-block-start: 5px;
-  accent-color: hsl(341, 100%, 49%);
+  accent-color: var(--fountain-blue);
 }
 
 .label-link {
   display: inline-block;
-  color: hsl(341, 100%, 49%);
+  color: var(--fountain-blue);
 }
 
 .label-link:is(:hover, :focus) {
@@ -707,9 +727,9 @@ textarea.input-field {
   position: fixed;
   bottom: 10px;
   right: 20px;
-  background-color: magenta;
+  background-color: var(--fountain-blue);
   color: #fff;
-  padding: 12px;
+  padding: 20px;
   border-radius: 50%;
   box-shadow: 0 6px 24px #ccc;
   z-index: 4;
@@ -828,7 +848,7 @@ textarea.input-field {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: lightpink;
+    background-color: var(--rihno);
     transform: scaleX(0);
     transform-origin: left;
     transition: 0.3s ease;
@@ -857,7 +877,7 @@ textarea.input-field {
     position: relative;
     padding-inline-start: 15px;
     font-size: 1.9rem;
-    border-left: 2px solid red;
+    border-left: 2px solid var(--rihno);
   }
 
   .hero-subtitle::before {
