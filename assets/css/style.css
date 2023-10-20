@@ -939,7 +939,7 @@ textarea.input-field {
   width: 2000px;
   height: 2000px;
   border-radius: 50%;
-  background: linear-gradient(-45deg, #4481eb, #84befe);
+  background: linear-gradient(-45deg, var(--rihno), var(--fountain-blue));
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
@@ -1035,7 +1035,7 @@ textarea.input-field {
   outline: none;
   border-radius: 49px;
   cursor: pointer;
-  background-color: #5995fd;
+  background-color: var(--rihno);
   color: #fff;
   text-transform: uppercase;
   font-weight: 500;
@@ -1044,7 +1044,7 @@ textarea.input-field {
 }
 
 .container-2 .btn:hover {
-  background-color: magenta;
+  background-color: var(--fountain-blue);
 }
 
 .forms-container .social-text {
@@ -1074,8 +1074,8 @@ textarea.input-field {
 }
 
 .forms-container .social-media i:hover {
-  color: #4481eb;
-  border-color: #4481eb;
+  color: var(--rihno);
+  border-color: var(--rihno);
 }
 
 .panels-container {
@@ -1184,4 +1184,136 @@ textarea.input-field {
 .container-2.sign-up-mode form.sign-up-form {
   z-index: 2;
   opacity: 1;
+}
+
+@media (max-width: 870px) {
+  .container-2 {
+    min-height: 800px;
+    height: 100vh;
+  }
+
+  .container-2:before {
+    width: 1500px;
+    height: 1500px;
+    left: 30%;
+    bottom: 68%;
+    transform: translateX(-50%);
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+
+  .signin-signup {
+    width: 100%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  .signin-signup,
+  .container-2.sign-up-mode .signin-signup {
+    left: 50%;
+  }
+
+  .panels-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .panels-container .panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1/2;
+  }
+
+  .panel .image {
+    width: 200px;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+  }
+  .panel .content {
+    padding-right: 15%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+  }
+
+  .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .panel p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+
+  .btn.transparent {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .left-panel {
+    grid-row: 1 / 2;
+  }
+
+  .right-panel {
+    grid-row: 3/4;
+  }
+
+  .right-panel .content,
+  .right-panel .image {
+    transform: translateY(300px);
+  }
+
+  .container-2.sign-up-mode:before {
+    transform: translate(-50%, 100%);
+    bottom: 32%;
+    right: initial;
+  }
+
+  .container-2.sign-up-mode .left-panel .image,
+  .container-2.sign-up-mode .left-panel .content {
+    transform: translateY(-300px);
+  }
+
+  .container-2.sign-up-mode .right-panel .image,
+  .container-2.sign-up-mode .right-panel .content {
+    transform: translateY(0px);
+  }
+
+  .container-2.sign-up-mode .signin-signup {
+    top: 5%;
+    transform: translate(-50%, 0);
+    /* left: 50%; */
+  }
+}
+
+@media (max-width: 570px) {
+  .container-2 form {
+    padding: 0 1.5rem;
+  }
+
+  .panel .image {
+    display: none;
+  }
+
+  .conatiner-2 {
+    padding: 1.5rem;
+  }
+
+  .panel .content {
+    padding: 0.5rem 1rem;
+  }
+
+  .conatiner-2:before {
+    bottom: 72%;
+    left: 50%;
+  }
+
+  .container-2.sign-up-mode:before {
+    bottom: 28%;
+    left: 50%;
+  }
 }
