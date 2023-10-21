@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>User Dashboard</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- material icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="dashboard-body">
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="dashboard-header">
+        <div class="menu-icon" data-menu-icon>
+          <span class="icon material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="icon material-icons-outlined">search</span>
+        </div>
+        <div class="header-right">
+          <span class="icon material-icons-outlined">logout</span> Logout
+        </div>
+      </header>
+      <!-- sidebar -->
+      <aside id="sidebar" data-sidebar>
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <img
+              src="../assets/images/g(4).svg"
+              alt="website logo"
+              class="w-logo"
+            />
+          </div>
+          <span class="icon material-icons-outlined" data-close-icon
+            >close</span
+          >
+        </div>
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">favorite</span> Watchlist
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">forum</span> Forum
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">phone</span> Support
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">email</span> Messages
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">settings</span> Settings
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- main -->
+      <div class="main-container"></div>
+      <!-- end main -->
+    </div>
+    <script src="../assets/js/dashboard.js"></script>
+  </body>
+</html>
