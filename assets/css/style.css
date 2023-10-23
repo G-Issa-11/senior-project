@@ -1378,11 +1378,9 @@ textarea.input-field {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px 20px 20px;
-  /* margin-bottom: 30px; */
-  /* background-color: #fff; */
+  /* padding: 20px 20px 20px 20px;
   border-bottom: 0.7px solid white;
-  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2); */
 }
 
 #dashboard-body #sidebar .sidebar-title > span {
