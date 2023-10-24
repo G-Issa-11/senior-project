@@ -88,7 +88,7 @@ h1,
 h2,
 h3 {
   color: var(--eerie-black);
-  line-height: 1.2;
+  line-height: 1.8rem;
   font-family: "League Spartan", sans-serif;
 }
 
@@ -195,7 +195,7 @@ h3 {
 }
 
 .logo > img {
-  height: 50px;
+  height: 60px;
 }
 
 .nav-toggle-btn {
@@ -1355,6 +1355,9 @@ textarea.input-field {
 #dashboard-body .dashboard-header .header-right {
   cursor: pointer;
 }
+#dashboard-body .dashboard-header .header-right img {
+  height: 60px;
+}
 
 #dashboard-body .dashboard-header .menu-icon {
   display: none;
@@ -1429,4 +1432,24 @@ textarea.input-field {
   grid-area: main;
   overflow-y: auto;
   padding: 20px;
+}
+
+#dashboard-body .initial-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 70px);
+}
+
+#dashboard-body .initial-content-container img {
+  height: 100%;
+  /* padding-bottom: 40px; */
+}
+
+#dashboard-body .initial-content-container h3 {
+  font-size: 3.6rem;
+  color: var(--eerie-black);
+  /* margin-top: 40px; */
 }
