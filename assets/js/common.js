@@ -1,27 +1,25 @@
-// Toggle sidebar
-
-const sidebar = document.querySelector("[data-sidebar]");
-const menuBtn = document.querySelector("[data-menu-icon");
-const closeBtn = document.querySelector("[data-close-icon");
 let sidebarOpen = false;
+const sidebar = document.getElementById("sidebar");
+console.log(sidebar);
 
-const openSidebar = () => {
-  if (!sidebarOpen) {
-    sidebar.classList.add("sidebar-responsive");
-    sidebarOpen = true;
-  }
-};
-
-const closeSidebar = () => {
+function toggleSidebar() {
   if (sidebarOpen) {
-    sidebar.classList.remove("sidebar-responsive");
-    sidebarOpen = false;
+    closeSidebar();
+  } else {
+    openSidebar();
   }
-};
+}
 
-menuBtn.addEventListener("click", openSidebar);
+function openSidebar() {
+  console.log("sidebar opened");
+  sidebar.classList.add("sidebar-responsive");
+  sidebarOpen = true;
+}
 
-closeBtn.addEventListener("click", closeSidebar);
+function closeSidebar() {
+  sidebar.classList.remove("sidebar-responsive");
+  sidebarOpen = false;
+}
 
 // Function to load page content
 function loadPageContent(pageUrl) {
@@ -34,8 +32,8 @@ function loadPageContent(pageUrl) {
     .catch(error => console.error("Error loading content:", error));
 }
 
-const sidebarLinks = document.querySelectorAll(".sidebar-list-item a");
 document.addEventListener("DOMContentLoaded", function() {
+  const sidebarLinks = document.querySelectorAll(".sidebar-list-item a");
   // Add click event listeners to sidebar links
   sidebarLinks.forEach(link => {
     link.addEventListener("click", function(e) {
