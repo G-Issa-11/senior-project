@@ -1,6 +1,5 @@
 let sidebarOpen = false;
 const sidebar = document.getElementById("sidebar");
-console.log(sidebar);
 
 function toggleSidebar() {
   if (sidebarOpen) {

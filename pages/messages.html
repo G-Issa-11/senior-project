@@ -5,10 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/profilepage.css" />
+    <style>
+      /* Add your parent styling here */
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .post-section {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        padding: 8px;
+        resize: none; /* Disable textarea resizing */
+      }
+
+      button {
+        background-color: #2b2e63;
+        color: white;
+        padding: 4px 12px;
+        width: 100px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #798dc5;
+      }
+
+      #postList {
+        list-style: none;
+        padding: 0;
+      }
+
+      #postList li {
+        border: 1px solid #ddd;
+        margin: 5px 0;
+        padding: 8px;
+        border-radius: 3px;
+      }
+    </style>
   </head>
   <body>
-    Hello this is my messages page!
+    <div class="container">
+      <!-- Your existing parent styling here -->
 
-    <script src="../assets/js/common.js"></script>
+      <!-- "What's on your mind" section -->
+      <form id="postForm">
+        <div class="post-section">
+          <textarea
+            id="postInput"
+            name="postContent"
+            placeholder="What's on your mind?"
+          ></textarea>
+          <button type="submit" id="postButton" onclick="printHello()">
+            Post
+          </button>
+          <ul id="postList"></ul>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function printHello() {
+        console.log("Hello world!");
+      }
+    </script>
   </body>
 </html>
